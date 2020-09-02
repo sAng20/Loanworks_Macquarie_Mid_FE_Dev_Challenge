@@ -1,0 +1,41 @@
+<div class="row no-gutter user-list">
+    <div class="col">
+        <!-- search bar -->
+        <div class="row">
+            <div class="col">
+                <h1>{{pageMeta.title}}</h1>
+                <p>{{pageMeta.description}}</p>
+                <!--  -->
+                <div class="searchBar">
+                    <div class="input-container">
+                      <input type="text" name="search" placeholder="username" [(ngModel)]="userInput" (keydown.enter)="searchUserByName()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="row">
+            <div class="col">
+
+                <!-- loader spinner -->
+                <div class="loader-wrap" *ngIf="loading">
+                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                </div>
+               
+                <!--  not found  -->
+                <p class="not-found" *ngIf="errorMsg">
+                    {{errorMsg}}
+                </p>
+
+                <!-- users content -->
+                <div class="d-flex flex-row align-content-stretch flex-wrap mb-3 mt-3">
+                    <div class="p-2" *ngFor="let user of users">
+                        <app-user-card-detail [data]="user"></app-user-card-detail>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

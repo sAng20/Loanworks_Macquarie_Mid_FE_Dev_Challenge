@@ -1,0 +1,20 @@
+.user-card-detail {
+	 border: 1px solid #ccc;
+	 padding: 10px;
+	 text-align: center;
+	 border-radius: 5px;
+	 min-height: 280px;
+	 margin: 0 5px 5px;
+}
+ .user-card-detail:hover {
+	 background-color: #00bed8;
+	 cursor: pointer;
+}
+ .user-card-detail img {
+	 width: 150px;
+	 padding: 0 0 10px;
+}
+ .user-card-detail p {
+	 color: #fff;
+	 margin: 0;
+}
