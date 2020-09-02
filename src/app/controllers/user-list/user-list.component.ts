@@ -36,7 +36,7 @@ export class UserListComponent implements OnInit {
         // push user data to users array
         this.users.push(data);
         // hide loader
-        this.hiderLoader();
+        this.hideLoader();
       },
       error => {
         // error on api
@@ -44,7 +44,7 @@ export class UserListComponent implements OnInit {
         // set error message
         this.errorMsg = error.error.message;
         // hide loader
-        this.hiderLoader();
+        this.hideLoader();
       }
     );
   }
@@ -55,7 +55,7 @@ export class UserListComponent implements OnInit {
   }
 
   // hide loading
-  hiderLoader() {
+  hideLoader() {
     this.loading = false;
   }
 
