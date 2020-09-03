@@ -15,7 +15,7 @@ export class UserListComponent implements OnInit {
     description: 'Search for a git user and hit enter.'
   };
   userInput: string;
-  errorMsg: string;
+  errorMsg = undefined;
   users = [];
   loading = false;
 
@@ -37,6 +37,7 @@ export class UserListComponent implements OnInit {
         this.users.push(data);
         // hide loader
         this.hideLoader();
+        this.errorMsg = undefined;
       },
       error => {
         // error on api
